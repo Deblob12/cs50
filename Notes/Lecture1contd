@@ -1,0 +1,129 @@
+CS50 Lecture 1 Continued
+
+ctrl + L clears terminal
+
+User input: Could use while or for, but kind of annoying
+If want to do something at least once but maybe more, use do while loop
+
+//Prompt user for a positive number
+do
+{
+	//scope error because n is within the do while loop only
+	int n = get_int("Positive Number: ");
+}
+while (n <= 0);
+
+for (int i = 0; i < n; i++)
+{
+	printf('#\n');
+}
+
+Basically keep on doing something while a certain condition is valid
+
+Scope of a variable is within the 2 curly braces and cannot be used outside of the curly brace
+
+Proper way to do it:
+
+//Prompt user for a positive number
+int n;
+do
+{
+	n = get_int("Positive Number: ");
+}
+while (n <= 0);
+
+for (int i = 0; i < n; i++)
+{
+	printf('#\n');
+}
+
+Printing a cube of blocks
+####
+####
+####
+####
+
+int n;
+do
+{
+	n = get_int("Positive Number: ");
+}
+while (n <= 0);
+
+for (int i = 0; i < n; i++)
+{
+	for (int j = 0; j < n; j ++)
+	{
+		printf('#');
+	}
+	printf("\n");
+}
+
+CS50 Library eprintf
+	-provide temporary note to myself
+	-Gives line number
+	-kind of a sanity check
+
+Click to left of line number for red dot. Tells computer to pause overthere
+
+debug50 ./mario4
+	-IDE's built in debugger
+	-local variables: tells value and type
+	-Play button plays rest of the program, refresh button step over one at a time, execute that line, goes one line at a time
+
+Data Types:
+	-specify what type of data to put in variable so the compiler knows
+	-printf has certain format code 
+	-man get_string manual gives info about function
+
+CS50 reference
+	-less verbose description of functions
+
+Strings really sequence of characters
+
+string0.c
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	string s = get_string("input:  ");
+	printf("output: ");
+	for (int i = 0; i < strlen(s); i++)
+	{
+		printf("%c", s[i]);
+	}
+}
+
+(int) s[i] type casts char to int ASCII codes
+
+Integers are characters, characters are integers, no need to be so explicit sometimes
+
+#include <ctype.h>
+islower(char)
+isupper(char)
+toupper(char)
+
+RAM lots and lots of bytes that can be stored in computer's memory, long lists of available bytes
+
+C puts a secret number at the end of any string we put in \0 (null nerminate)
+Sentinal value: special value
+while(s[n] != '\0') --> goes to the end of any string 
+
+String is special because there are no predetermined length
+
+Array: something directly back to back to back
+
+Main function can get command-line arguments
+
+int main(int argc, string argv[])
+
+argc is the total number of words human entered
+argv argument vector is array of words that user types at prompt before hitting enter
+
+Name of the program is included in argc
+
+Segmentation Fault-- touch RAM that you shouldn't have
+
+Encrypt: Plain Text --> Cipher Text
