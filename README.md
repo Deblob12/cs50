@@ -11,4 +11,5 @@ Harvard edX cs50 Course Problem Sets and Projects
 - [pset2](/pset2)
   * [caesar](/pset2/caesar)
   * [vigenere](/pset2/vigenere)
+  * [crack](/pset2/crack)
 ##
