@@ -6,7 +6,7 @@ Harvard edX cs50 Course Problem Sets and Projects
 - [pset1](/pset1)
   * [hello](/pset1/hello)
   * [credit](/pset1/credit)
-  * [mario] (/pset1/mario)
+  * [mario](/pset1/mario)
     + [more](/pset1/mario/more)
 - [pset2](/pset2)
   * [caesar](/pset2/caesar)
