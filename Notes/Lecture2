@@ -1,0 +1,27 @@
+Lecture2
+
+Memory black part used to store 0s and 1s with bits and bytes of memory
+
+Each one has a specific index or address
+
+\0 is the only reason C knows where strings end
+
+initials.c
+
+int main(void)
+{
+	string s = get_string("Name: ");
+	char initial[4]; //when stuff is declared garbage values
+	int counter = 0;
+
+	for (int i = 0; i < strlen(name); i++)
+	{
+		if (isupper(s[i]))
+		{
+			initials[counter] = initial[i];
+			counter++;
+		}
+	}
+
+	initial[counter] = '\0'; //make sure to initialize even if dude doesnt have middle initial bc dont want garbage characters
+}
