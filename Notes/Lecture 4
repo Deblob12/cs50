@@ -1,0 +1,131 @@
+Lecture 4
+
+No such thing as string in C
+
+Swapping valuable of two variables need another variable
+
+	void swap(int a, int b)
+	{
+		int tmp = a;
+		a = b;
+		b = tmp;
+	}
+This doesn't work because
+
+Computer memory
+		Text
+		Initialized Data
+		Uninitialized Data
+		Heap
+		|
+		|
+		v
+
+		^
+		|
+		|
+		stack
+
+		Environment Variables
+
+String is not a primitive data type
+String is basically char *
+strcmp returns 0 if same -1 if first term is alphabetically before and 1 if alphabetically later
+
+string s = get_string("s: ");
+
+Left hand: Tell computer to give a box (chunk) of memory and call it s
+Right Hand: Get the name --> S|t|e|l|i|o|s|\0
+
+Box s just store the location of the first character of name, where the string begins, so only need 4 or 8 bytes
+
+string t = get_string("t: ");
+
+Left hand: Tell computer to give a box (chunk) of memory and call it t
+Right Hand: Get the name --> S|t|e|l|i|o|s|\0
+
+t is not the same location as s therefore not the same
+== compares the memory location
+
+pointer is address of something in memory --> points to the first byte of something in memory --> string is just a name for char * a pointer --> pointer to char data type
+
+strcmp compares the values in the two addresses go one char at a time
+
+copy.c
+	char *s = get_string("s: );
+	char *t = s; //stores the address of s to t
+	t[0] = toupper(t[0]) capitalizes both s and t because they both point to the same memory location
+
+Need extra chunk of memory
+
+copy1.c
+	char *s = get_string("s: ); //returns NULL if out of memory, NULL is just a synonym for 0
+	if (!s)
+	{
+		return 1;
+	}
+	//malloc means memory allocation, one argument (number of bytes u want) --> hands back chunk of memory equal to the number of bytes--> returns the address of the beginning of the chunk of memory
+	char *t = malloc((strlen(s) + 1) * sizeof(char))
+	for (int i = 0, n = strlen(s); i <= n //include null character for fear of garbage value; i ++)
+	{
+		t[i] = s[i];
+	}
+
+	if (strlen(t) > 0)
+	{
+		t[0] = toupper(t[0]);
+	}
+
+	print("s: %s\n", s);
+	print("s: %s\n", s);
+
+	free(t);
+	return 0;
+
+Pointer Arithmetic
+	- *(s+i) moves the index s up by i bytes
+	- If there's a data type to the left of the star its a pointer variable. Otherwise, if theres a star and a parenthetical operation next to it, tells computer to just go to that address--> go to that pointer
+
+scan0.c
+	int main(void)
+	{
+		int x;
+		printf("x ");
+		scanf("%i", &x);
+		printf("x: *i\n", x);
+	}
+
+Scanf
+	-takes in the format string and address(&) of the variable
+	-int x; just gives a chunk of memory &x tells where the memory is
+
+Malloc comes from heap, which is kind of like the top of memory
+Any time you call a function, the memory for the local variable comes from stack
+	-lowest region is for main's local variables
+	-for swap, they get their own stack frame
+	-Pass by value, x gets copied into a and y gets copied into b
+	-as soon as function returns, the stack frame of memory goes away
+	-functions dont have access to others memory spaces, only to the values that are passed in
+
+To successfully swap something, you have to swap what's in the address, store in the local variables the addresses --> a function can only change another functions memory if you give it a pointer to those addresses
+
+struct --> gives structure to data
+
+typedef struct
+{
+	string name;
+	string dorm;
+}
+student;
+
+Define your own data structure and inside it known data types
+
+Persistent Data: Data that exists after runniong the program
+FILE*
+	-fopen(<file pointer>, <operation>) opens a file and returns a file pointer to it --> make sure to check its not null
+	-fclose(<file pointer>) closes a file
+	-char ch = fgetc(<file pointer>); --> gets the very next character of the file, file pointer must be opened for reading
+	-EOF is the special end of file character
+	-fputc(<character>, <file pointer>) --> required in "w" mode
+	-fread(<buffer>, <size>, <qty>, <file pointer>); read an arbitrary amount of information
+	-fwrite is pretty much the same thing as fread but writing
