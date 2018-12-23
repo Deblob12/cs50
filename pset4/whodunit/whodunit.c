@@ -1,3 +1,11 @@
+/**
+ * CS50 Pset 4
+ * whodunit.c
+ *
+ * Author: Jeffrey Chiu
+ * Removes red dots on image to reveal identity of criminal murderer
+ *
+**/
 #include <stdio.h>
 #include <stdlib.h>
 
