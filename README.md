@@ -14,4 +14,6 @@ Harvard edX cs50 Course Problem Sets and Projects
   * [crack](/pset2/crack)
 - [pset3](/pset3)
   * [music](/pset3/music)
+- [pset4](/pset4)
+  * [whodunit](/pset4/whodunit)
 ##
