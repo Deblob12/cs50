@@ -1,3 +1,10 @@
+# Images
+  ## Clue
+  ![Clue](clue.bmp)
+
+  ## Verdict
+  ![Verdict](verdict.bmp)
+
 # Questions
 
 ## What's `stdint.h`?
