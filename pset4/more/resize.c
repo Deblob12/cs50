@@ -1,3 +1,11 @@
+/**
+ * CS50 Pset 4
+ * whodunit.c
+ *
+ * Author: Jeffrey Chiu
+ * Program to shrink or expand .bmp images
+ *
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
