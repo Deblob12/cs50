@@ -18,4 +18,5 @@ Harvard edX cs50 Course Problem Sets and Projects
   * [whodunit](/pset4/whodunit)
   * [resize/more](/pset4/more)
   * [resize/less](/pset4/less)
+  * [recover](/pset4/recover)
 ##
