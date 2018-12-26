@@ -16,4 +16,6 @@ Harvard edX cs50 Course Problem Sets and Projects
   * [music](/pset3/music)
 - [pset4](/pset4)
   * [whodunit](/pset4/whodunit)
+  * [resize/more](/pset4/more)
+  * [resize/less](/pset4/less)
 ##
