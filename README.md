@@ -19,4 +19,6 @@ Harvard edX cs50 Course Problem Sets and Projects
   * [resize/more](/pset4/more)
   * [resize/less](/pset4/less)
   * [recover](/pset4/recover)
+- [pset5](/pset5)
+  * [speller](/pset5/speller)
 ##
