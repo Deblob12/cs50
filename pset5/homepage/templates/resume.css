@@ -1,0 +1,30 @@
+#red {
+    background-color: red;
+    text-align: center;
+    float: left;
+    color: white;
+    padding: 15px 32px;
+}
+#green {
+    background-color: green;
+    text-align: center;
+    float: left;
+    color: white;
+    padding: 15px 32px;
+}
+#blue {
+    background-color: blue;
+    text-align: center;
+    float: left;
+    color: white;
+    padding: 15px 32px;
+}
+#resume {
+   width: 780px;
+   height: 1000px;
+}
+footer
+{
+    margin-left: 75px;
+    margin-bottom: 75px;
+}
