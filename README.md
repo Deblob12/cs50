@@ -21,4 +21,5 @@ Harvard edX cs50 Course Problem Sets and Projects
   * [recover](/pset4/recover)
 - [pset5](/pset5)
   * [speller](/pset5/speller)
+  * [homepage](/pset5/homepage)
 ##
