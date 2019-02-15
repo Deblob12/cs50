@@ -22,4 +22,13 @@ Harvard edX cs50 Course Problem Sets and Projects
 - [pset5](/pset5)
   * [speller](/pset5/speller)
   * [homepage](/pset5/homepage)
+- [pset6](/pset6)
+  * [bleep](/pset6/bleep)
+  * [caesar](/pset6/caesar)
+  * [cash](/pset6/cash)
+  * [hello](/pset6/hello)
+  * [mario](/pset6/mario)
+- [pset7](/pset7)
+  * [similarities](/pset7/similarities)
+  * [survey](/pset7/survey)
 ##
