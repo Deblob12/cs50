@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">CS50 Diner RSVP</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+         <div class="form-group">
+            <label for="emailadd">Email address</label>
+            <input type="email" class="form-control" id="emailadd" placeholder="name@example.com" name = "emaill">
+         </div>
+         <div class="form-group">
+            <label for="appetizer">Choose Appetizer</label>
+            <select class="form-control" id="appetizer" name = "app">
+              <option>Caesar Salad</option>
+              <option>Jalapeno Poppers</option>
+              <option>Baked Potato</option>
+              <option>Garlic Bread</option>
+              <option>Cheese Sticks</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="drinks">Drinks</label>
+            <select multiple class="form-control" id="drinks" name = "drinkk">
+              <option>Water</option>
+              <option>Coke</option>
+              <option>Coffee</option>
+              <option>Juice</option>
+              <option>Tea</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="diet">Special Dietary Restrictions?</label>
+            <textarea class="form-control" id="diet" rows="3" name = "diett"></textarea>
+          </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="children" id="child" value="Booster Seat" checked>
+          <label class="form-check-label" for="child">
+            I will require a booster seat for my child.
+          </label>
+          </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="children" id="nochild" value="No Booster Seat">
+          <label class="form-check-label" for="nochild">
+            I will not require a booster seat for my child
+          </label>
+          </div>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('#emailadd').value) {
+                alert('You must provide your Email!');
+                return false;
+            }
+            else if (!document.querySelector('#appetizer').value) {
+                alert('You must choose an appetizer!');
+                return false;
+            }
+            else if (!document.querySelector('#drinks').value) {
+                alert('You must choose a drink!');
+                return false;
+            }
+        };
+
+    </script>
+
+{% endblock %}

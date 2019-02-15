@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Email Address</th>
+                <th>Appetizer</th>
+                <th>Drinks</th>
+                <th>Dietary Restrictions</th>
+                <th>Child</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rsv in rsvp %}
+                <tr>
+                    <td>{{ rsv["email"] }}</td>
+                    <td>{{ rsv["appetizer"] }}</td>
+                    <td>{{ rsv["drinks"] }}</td>
+                    <td>{{ rsv["diet"] }}</td>
+                    <td>{{ rsv["child"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
